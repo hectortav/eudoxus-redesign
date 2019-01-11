@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
+
+<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <title>Σελίδα Εισόδου</title>
+  <link rel="stylesheet" href="../styling/login.css"/>
+</head>
 
-  <form>
-    Όνομα Χρήστη:<br>
-    <input type="text" name="username" value="Όνομα Χρήστη"><br>
-    Κωδικός:<br>
-    <input type="text" name="password" value="Κωδικός"><br><br>
-    <input type="submit"  value="Είσοδος">
-  </form>
+<body>
+
+  <img src="../images/logo.png" alt="Eudoxus logo" class="logo">
+
+  <div class="content">
+    <form>
+      Όνομα Χρήστη:<br>
+      <input type="text" name="username" value="Όνομα Χρήστη"><br><br>
+      Κωδικός:<br>
+      <input type="text" name="password" value="Κωδικός">
+      <div class="signin">
+        <input type="submit"  value="Είσοδος">
+      </div>
+      <div class="cancel">
+        <button type="button" href="./index.html">Άκυρο</button>
+      </div>
+    </form>
+  </div>
+</body>
 </html>
