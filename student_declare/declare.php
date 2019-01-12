@@ -21,7 +21,6 @@
 
   <body>
 
-    <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
         <a class="navbar-brand" href="#">Start Bootstrap</a>
@@ -56,13 +55,40 @@
                 <li class="active">Δήλωση</li>
             </ol>
         </div>
+<!--
         <div class="card">
           <img src="../images/cover59366672.jpg" alt="cover59366672" style="width:100%">
           <h1>Εισαγωγή στην Αλληλεπίδραση Ανθρώπου-Υπολογιστή</h1>
           <p>Πληροφορίες για το βιβλίο..</p>
           <p><button>Προσθήκη στην Βιβλιοθήκη μου</button></p>
         </div>
-				<?php include('server.php') ?>
+-->
+				<?php
+          include('server.php');
+
+          $ar = get_subjects('EKPA', 'PLHROFORIKHS KAI THLEPIKOINWNIWN', 5); //panepisthmio, tmhma, eksamhno kai emfanizei ta mathhmata
+          //$ar[] = 'ARITHMHTIKH ANALYSH'; an thelw na emfanisw mono gia ena mathhma
+          $arb = get_books($ar, 1); //epistrefei pinaka me mathhmata //stelnw pinaka me mathhmata, sort by 0 = alfavhtika, 1 = megalutero popularity, 2 = mikrotero popularity
+          for($x = 0; $x < sizeof($arb); $x++) {
+            echo $arb[$x];
+            echo "<br>";
+          }
+          $num = get_ISBN('Computer and Human Interaction');
+          echo $num;
+          echo "<br>";
+          $sub = get_subject('Computer and Human Interaction');
+          echo $sub;
+          echo "<br>";
+          $string = addTo_cart(get_ISBN($arb[0]), get_subject($arb[0])); //prosthhkh sto kalathi //thelei ISBN kai Mathhma
+          echo $string;
+          echo "<br>";
+          $string = removeFrom_cart(get_ISBN($arb[0]), get_subject($arb[0]));
+          echo $string;
+          echo "<br>";
+          $string = addTo_cart(get_ISBN($arb[0]), get_subject($arb[0])); //prosthhkh sto kalathi //thelei ISBN kai Mathhma
+          echo $string;
+          echo "<br>";
+        ?>
 
 
 
