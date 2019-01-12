@@ -1,0 +1,10 @@
+* {
+  margin:0 auto;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+    font-family: Arial;
+  }
+}
