@@ -9,25 +9,85 @@ body {
   }
 }
 
-.contact-bar ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  border: 1px solid white;
-  background-color: #333;
+
+
+/*contact bar*/
+.contact-section row {
+    display: inline;
+}
+.contact-section {
+    margin-top: 3vh;
+    text-align: center;
+    padding-bottom: 3vh;
 }
 
-.contact-bar li {
-  float: left;
+    .contact-section .btn.big-size {
+        font-size: 1.5em;
+    }
+
+        .contact-section .btn.big-size i {
+            color: #f89b34;
+            font-size: 1.8em;
+            margin-left: 0.3em;
+        }
+
+@media only screen and (max-width : 576px) {
+    .contact-section {
+        text-align: left;
+    }
+
+.contact-section .btn.big-size
+    {
+        font-size: 1em
+    }
+    .contact-section .btn.big-size i {
+        font-size: 2em;
+        margin-right: 10px
+    }
+}
+    .contact-section .btn * {
+        vertical-align: middle;
+    }
+
+footer .social-icons a {
+    cursor: pointer;
+    font-size: 1.3em;
 }
 
-.contact-bar a {
-  display: block;
-  color: black;
-  padding: 50px 60px;
-  text-decoration: none;
-  text-align: center;
+footer .input-group {
+    width: 100%;
 }
+
+@media(max-width: 768px) {
+
+    .contact-section {
+        text-align: left;
+        padding: 0;
+    }
+}
+
+@media(min-width: 1248px) {
+    .vertical-align {
+        display: flex;
+        flex-direction: row;
+    }
+
+        .vertical-align > [class^="col-"] {
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Optional, to align inner items
+                                horizontally inside the column */
+        }
+
+    footer .footer-logo {
+        margin-left: 15px;
+    }
+}
+
+
+
+
+
 
 /* Navbar container */
 .navbar {
