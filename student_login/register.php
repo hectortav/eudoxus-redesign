@@ -7,10 +7,10 @@
 </head>
 <body>
 	<div class="logo">
-		<p style="text-align:center;"><img src="../images/logo.png" alt="logo"></p>
+		<p style="text-align:center;"><img src="../askisi3/images/logo.png" alt="logo"></p>
 	</div>
 	<div class="header">
-		<h2>Register</h2>
+		<h2>Εγγραφή</h2>
 	</div>
 
 	<form method="post" action="register.php">

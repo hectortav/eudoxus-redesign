@@ -7,19 +7,19 @@
 </head>
 <body>
 	<div class="logo">
-		<p style="text-align:center;"><img src="../images/logo.png" alt="logo"></p>
+		<p style="text-align:center;"><img src="../askisi3/images/logo.png" alt="logo"></p>
 	</div>
 	<div class="header">
 		<h2>Σύνδεση</h2>
 	</div>
 
-	<form method="post" action="login.php">
+	<form method="post" action="index.php">
 
 		<?php include('errors.php'); ?>
 
 		<div class="input-group">
 			<label>Διεύθυνση Email</label>
-			<input type="text" name="email" >
+			<input type="text" onfocus="this.value=''" value="Διεύθυνση Email" name="email" >
 		</div>
 		<div class="input-group">
 			<label>Κωδικού</label>
@@ -29,7 +29,7 @@
 			<button type="submit" class="btn" name="login_user">Σύνδεση</button>
 		</div>
 		<p>
-			Δεν έχετε λογαριασμό; <a href="register.php">Εγγραφή</a>
+			Δεν έχετε λογαριασμό; <a href="./student_login/register.php">Εγγραφή</a>
 		</p>
 	</form>
 

@@ -33,7 +33,7 @@
 			mysqli_query($db, $query);
 
 			$_SESSION['success'] = "You are now logged in";
-			header('location: ../index.html');
+			header('location: ../askisi3/index.php');
 		}
 
 	}
@@ -47,7 +47,6 @@
 	if (isset($_POST['login_user'])) {
 		$email = mysqli_real_escape_string($db, $_POST['email']);
 		$password = mysqli_real_escape_string($db, $_POST['password']);
-
 		if (empty($email)) {
 			array_push($errors, "Email is required");
 		}
@@ -63,7 +62,7 @@
 			if (mysqli_num_rows($results) == 1) {
 				$_SESSION['email'] = $email;
 				$_SESSION['success'] = "You are now logged in";
-				header('location: ../index.html');
+				header('location: ../askisi3/index.php');
 			}else {
 				array_push($errors, "Wrong email/password combination");
 			}
