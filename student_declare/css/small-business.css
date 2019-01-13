@@ -35,26 +35,88 @@ body {
 
 /*******************************/
 
+.book-title {
+  background-color: #FFFFFF; /* Green */
+  border: none;
+  color: black;
+  max-width: 250px;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  padding: 10px 10px;
+}
+
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 50px;
-  margin: auto;
+  max-width: 250px;
+  margin: left;
   text-align: center;
   font-family: arial;
 }
 
-.button {
+.btnAddAction {
+  background-color: #555555; /* Green */
   border: none;
-  outline: 0;
-  padding: 12px;
   color: white;
-  background-color: #000;
+  max-width: 250px;
+  padding: 5px 5px;
   text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
-.button:hover {
+.btnAddAction:hover {
   opacity: 0.7;
+}
+
+.column {
+  float: left;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/**************************/
+
+.side_bar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 10%;
+  background-color: #f1f1f1;
+  height: 100%; /* Full height */
+  position: fixed; /* Make it stick, even on scroll */
+  overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+.filters a{
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.filters a.active {
+  background-color: #f89b34;
+  color: white;
+}
+
+.filters a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.order {
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 8px 16px;
 }

@@ -50,6 +50,7 @@
 
 	function get_books($ar = "", $order = 0) //stelnw pinaka me mathhmata, sort by 0 = alfavhtika, 1 = megalutero popularity, 2 = mikrotero popularity
 	{
+
 		if (is_array($ar))
 		{
 			$counter = 0;
@@ -220,4 +221,6 @@
 		return $string;
 
 	}
+
+	
 ?>
