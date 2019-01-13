@@ -19,11 +19,11 @@
 
 		<div class="input-group">
 			<label>Διεύθυνση Email</label>
-			<input type="text" onfocus="this.value=''" value="Διεύθυνση Email" name="email" >
+			<input type="text" name="email" style="height: 38px;" placeholder="E-mail" minlength="3" required="">
 		</div>
 		<div class="input-group">
-			<label>Κωδικού</label>
-			<input type="password" name="password">
+			<label>Κωδικός</label>
+			<input type="password" name="password"  style="height: 38px;" placeholder="Κωδικός" minlength="3" required="">
 		</div>
 		<div class="input-group">
 			<button type="submit" class="btn" name="login_user">Σύνδεση</button>

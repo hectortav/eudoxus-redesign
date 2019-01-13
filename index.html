@@ -14,7 +14,29 @@
     <img src="./images/logo.png" alt="Eudoxus logo">
   </a>
 
+  <header id="header" class="header ng-scope">
+      <div class="header-top bg-deep sm-text-center">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-6">
+                      <div class="widget no-border m-0">
+                          <div class="search-form-wrapper">
+                              <form id="searchform" name="searchform" method="get" class="m-0 ng-pristine ng-invalid ng-invalid-required ng-valid-minlength" ng-submit="vm.search(searchform)" novalidate="">
+                                  <input type="text" name="searchTerm" id="searchInput" class="search-input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength" style="height: 38px;" placeholder="Αναζήτηση" minlength="3" required="">
 
+                                  <label title="Υποχρεωτικό πεδίο (Ελάχιστο μήκος 3 χαρακτήρες)">
+                                      <input type="submit" name="submit" style="height: 34px;">
+                                  </label>
+                                  <!--<span ng-show="(searchform.$dirty || searchform.$submitted) &amp;&amp; searchform.searchTerm.$error.minlength" class="error ng-hide">Ελάχιστο μήκος 3 χαρακτήρες</span>-->
+                              </form>
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </header>
 
 
 <!------navigation bar----->
@@ -66,9 +88,9 @@
        <img src="./images/logo.png" alt="Eudoxus logo" class="logo">
        <form>
          Όνομα Χρήστη:<br>
-         <input type="text" onfocus="this.value=''" name="username" value="Όνομα Χρήστη"><br>
+         <input type="text" name="email" style="height: 38px;" placeholder="E-mail" minlength="3" required=""><br>
          Κωδικός:<br>
-         <input type="text" onfocus="this.value=''" name="password" value="Κωδικός"><br>
+         <input type="password" name="password" style="height: 38px;" placeholder="Κωδικός" minlength="3" required=""><br>
          <div class="signin">
            <input type="submit"  value="Είσοδος">
          </div>
@@ -135,7 +157,7 @@ window.onclick = function(event) {
 }
 </script>
 
-<!-----------footer------------->
+<!--footer------------->
     <footer>
       <p>Αυτή η σελίδα υλοποιήθηκε από τον Έκτορα Ταβουλάρη και τον Θοδωρή Μέλλιο</p>
     </footer>
