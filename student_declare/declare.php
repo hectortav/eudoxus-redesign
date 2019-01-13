@@ -55,39 +55,68 @@
                 <li class="active">Δήλωση</li>
             </ol>
         </div>
-<!--
-        <div class="card">
-          <img src="../images/cover59366672.jpg" alt="cover59366672" style="width:100%">
-          <h1>Εισαγωγή στην Αλληλεπίδραση Ανθρώπου-Υπολογιστή</h1>
-          <p>Πληροφορίες για το βιβλίο..</p>
-          <p><button>Προσθήκη στην Βιβλιοθήκη μου</button></p>
-        </div>
--->
+
+        <?php
+            if(!empty($_GET["action"])) {
+              switch($_GET["action"]) {
+                case "add":
+                  echo "WFGYGFYWAGFWGNFWQFGWQYGFQWNFGWQGFWQNGNFWGFW";
+                  //if(!empty($_POST["quantity"]))
+                  //{
+                  //	$productByCode = $db_handle->runQuery("SELECT * FROM tblproduct WHERE code='" . $_GET["code"] . "'");
+                  //}
+                  break;
+              }
+            }
+         ?>
+
 				<?php
           include('server.php');
-
-          $ar = get_subjects('EKPA', 'PLHROFORIKHS KAI THLEPIKOINWNIWN', 5); //panepisthmio, tmhma, eksamhno kai emfanizei ta mathhmata
+          $ar = get_subjects('EKPA', 'PLHROFORIKHS KAI THLEPIKOINWNIWN'); //panepisthmio, tmhma, eksamhno kai emfanizei ta mathhmata
           //$ar[] = 'ARITHMHTIKH ANALYSH'; an thelw na emfanisw mono gia ena mathhma
-          $arb = get_books($ar, 1); //epistrefei pinaka me mathhmata //stelnw pinaka me mathhmata, sort by 0 = alfavhtika, 1 = megalutero popularity, 2 = mikrotero popularity
-          for($x = 0; $x < sizeof($arb); $x++) {
-            echo $arb[$x];
-            echo "<br>";
+          //$arb = get_books($ar, 1); //epistrefei pinaka me mathhmata //stelnw pinaka me mathhmata, sort by 0 = alfavhtika, 1 = megalutero popularity, 2 = mikrotero popularity
+          /*for($x = 0; $x < sizeof($arb); $x++)
+          {
+            //echo $arb[$x];
+            //echo "<br>";
+          }*/
+          for($y = 0; $y< sizeof($ar); $y++)
+          {
+            echo '<h1>'.$ar[$y].'</h1>';
+            //$arb = array();
+            $arb = get_books($ar[$y], 1);
+            for($x = 0; $x < sizeof($arb); $x++)s
+            { ?>
+              <div class="card">
+            		<form method="post" action="index.php?action=add&code=<?php echo $arb[$x]; ?>">
+                <img src="../images/cover59366672.jpg" alt="cover59366672" style="width:100%">
+            		<div class="product-tile-footer">
+            		<div class="product-title"><?php echo $arb[$x]; ?></div>
+            		<div class="cart-action"><input type="submit" value="Προσθήκη στην Βιβλιοθήκη μου" class="btnAddAction" /></div>
+            		</div>
+            		</form>
+            	</div>
+          <?php
+            }
           }
+
+
+          /*
           $num = get_ISBN('Computer and Human Interaction');
           echo $num;
           echo "<br>";
-          $sub = get_subject('Computer and Human Interaction');
+          $sub = bookTo_subject('Computer and Human Interaction');
           echo $sub;
           echo "<br>";
-          $string = addTo_cart(get_ISBN($arb[0]), get_subject($arb[0])); //prosthhkh sto kalathi //thelei ISBN kai Mathhma
+          $string = addTo_cart(get_ISBN($arb[0]), bookTo_subject($arb[0])); //prosthhkh sto kalathi //thelei ISBN kai Mathhma
           echo $string;
           echo "<br>";
-          $string = removeFrom_cart(get_ISBN($arb[0]), get_subject($arb[0]));
+          $string = removeFrom_cart(get_ISBN($arb[0]), bookTo_subject($arb[0]));
           echo $string;
           echo "<br>";
-          $string = addTo_cart(get_ISBN($arb[0]), get_subject($arb[0])); //prosthhkh sto kalathi //thelei ISBN kai Mathhma
+          $string = addTo_cart(get_ISBN($arb[0]), bookTo_subject($arb[0])); //prosthhkh sto kalathi //thelei ISBN kai Mathhma
           echo $string;
-          echo "<br>";
+          echo "<br>";*/
         ?>
 
 

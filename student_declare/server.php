@@ -48,13 +48,9 @@
 		}
 	}
 
-	function get_books($ar = 0, $order = 0) //stelnw pinaka me mathhmata, sort by 0 = alfavhtika, 1 = megalutero popularity, 2 = mikrotero popularity
+	function get_books($ar = "", $order = 0) //stelnw pinaka me mathhmata, sort by 0 = alfavhtika, 1 = megalutero popularity, 2 = mikrotero popularity
 	{
-		if ($ar == 0)
-		{
-			echo "0 Βιβλία" ."<br>";
-		}
-		else
+		if (is_array($ar))
 		{
 			$counter = 0;
 			$errors = array();
@@ -63,7 +59,7 @@
 			$result = "";
 			for($counter = 0; $counter < sizeof($ar); $counter++)
 			{
-				echo $ar[$counter] ."<br>";
+				//echo $ar[$counter] ."<br>";
 				if ($order == 1)
 				{
 					$query = "SELECT book_name FROM book INNER JOIN subject_book ON subject_book.ISBN = book.ISBN WHERE subject_book.subject_name = '$ar[$counter]' GROUP BY book.popularity DESC";
@@ -80,6 +76,7 @@
 				if ($result->num_rows > 0) {
 					// output data of each row
 					while($row = $result->fetch_assoc()) {
+						//echo $row["book_name"];
 						$arb[] = $row["book_name"];
 						//echo "book: ". $key ."<br>";
 					}
@@ -91,6 +88,46 @@
 					echo "0 books" ."<br>";
 				}
 			}
+		}
+		else if ($ar == "")
+		{
+			echo "0 Βιβλία" ."<br>";
+		}
+		else
+		{
+			$counter = 0;
+			$errors = array();
+			$db = mysqli_connect('localhost', 'root', 'pa55word', 'mydb');
+			$query = "";
+			$result = "";
+				//echo $ar[$counter] ."<br>";
+				if ($order == 1)
+				{
+					$query = "SELECT book_name FROM book INNER JOIN subject_book ON subject_book.ISBN = book.ISBN WHERE subject_book.subject_name = '$ar' GROUP BY book.popularity DESC";
+				}
+				else if ($order == 2)
+				{
+					$query = "SELECT book_name FROM book INNER JOIN subject_book ON subject_book.ISBN = book.ISBN WHERE subject_book.subject_name = '$ar' GROUP BY book.popularity ASC";
+				}
+				else
+				{
+					$query = "SELECT book_name FROM book INNER JOIN subject_book ON subject_book.ISBN = book.ISBN WHERE subject_book.subject_name = '$ar' GROUP BY book_name";
+				}
+				$result = mysqli_query($db, $query);
+				if ($result->num_rows > 0) {
+					// output data of each row
+					while($row = $result->fetch_assoc()) {
+						//echo $row["book_name"];
+						$arb[] = $row["book_name"];
+						//echo "book: ". $key ."<br>";
+					}
+					return $arb;
+					//mysql_close($db);
+				}
+				else {
+					//mysql_close($db);
+					echo "0 books" ."<br>";
+				}
 		}
 	}
 
@@ -108,7 +145,7 @@
 
 	}
 
-	function get_subject($name = '')
+	function bookTo_subject($name = '')
 	{
 		$errors = array();
 		$db = mysqli_connect('localhost', 'root', 'pa55word', 'mydb');
