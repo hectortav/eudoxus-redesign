@@ -2,6 +2,21 @@
   margin: 0;
   padding: 0;
 }
+/* slightly enhanced, universal clearfix hack */
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \\*/
+* html .clearfix { height: 1&#37;; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
 
 body {
     color: #777777;
@@ -122,7 +137,7 @@ ul {
  text-align: left;
 }
 
-/* Add a grey background color to dropdown links on hover */
+/* Add an orange background color to dropdown links on hover */
 .dropdown-content a:hover {
  background-color: #EA5A00;
 }
@@ -194,7 +209,7 @@ h2 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.2;
-  color: inherit;
+  color: #333;
   margin-top: 0;
   text-align: center;
 }
@@ -238,6 +253,83 @@ a {
     text-decoration: none;
 }
 
+
+
+
+
+
+
+/*contact bar*/
+.contact-section row {
+    display: inline;
+}
+.contact-section {
+    margin-top: 3vh;
+    text-align: center;
+    padding-bottom: 3vh;
+    overflow: hidden;
+}
+
+.contact-section .btn.big-size {
+    font-size: 1.5em;
+}
+
+.contact-section .btn.big-size i {
+    color: #EA5A00;
+    font-size: 1.8em;
+    margin-left: 0.3em;
+}
+
+@media only screen and (max-width : 576px) {
+.contact-section {
+    text-align: left;
+}
+
+.contact-section .btn.big-size
+    {
+        font-size: 1em
+    }
+    .contact-section .btn.big-size i {
+        font-size: 2em;
+        margin-right: 10px
+    }
+}
+    .contact-section .btn * {
+        vertical-align: middle;
+    }
+
+
+.ui-sortable {
+  border-right: 1px solid #EA5A00;
+  min-height: 50px;
+}
+
+.col-lg-4 {
+  width: 31%;
+  float: left;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+.big-size {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1.5em;
+  border: 0px;
+  padding: 8px 22px;
+  color: #333;
+  background-color: #fff;
+}
 
 footer {
   padding-bottom: 3rem;
