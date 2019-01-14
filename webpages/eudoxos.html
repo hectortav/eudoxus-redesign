@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Εύδοξος – Ηλεκτρονική Υπηρεσία Ολοκληρωμένης Διαχείρισης Συγγραμμάτων</title>
+  <link rel="stylesheet" href="./styling/style.css"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+
+<body>
+
+
+<header>
+  <!--logo-------->
+  <div class="upper-header">
+    <div class="container top">
+      <div class="col-md-logreg">
+        <div class="no-border m-0">
+          <ul class="list">
+            <li><a href="./student_login/login.php">Σύνδεση</a></li>
+            <li class=""><span class="top-bar-seperator">|</span></li>
+            <li><a href="/student_login/register.php">Εγγραφή</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-search">
+        <div class="no-border m-0">
+          <div class="search-form-wrapper">
+            <form id="searchform" name="searchform" method="get" class="" ng-submit="vm.search(searchform)" novalidate="">
+              <input type="text" name="searchTerm" id="searchInput" class="" style="height: 38px;" placeholder="Αναζήτηση" ng-model="vm.searchTerm" minlength="3" required="">
+              <label title="Υποχρεωτικό πεδίο (Ελάχιστο μήκος 3 χαρακτήρες)">
+                <input type="submit" name="submit" style="height: 34px;">
+              </label>
+              <span ng-show="(searchform.$dirty || searchform.$submitted) &amp;&amp; searchform.searchTerm.$error.minlength" class="error ng-hide">Ελάχιστο μήκος 3 χαρακτήρες</span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="down-header">
+    <div class="container">
+      <nav class="menu">
+        <div class="index-logo pull-left">
+          <a href="./index.html"><img src="./images/logo.png" alt="Eudoxus logo"></a>
+        </div><br class="clear"/>
+
+        <div class="navbar">
+          <div class="dropdown">
+            <a class="active dropbtn" href="./index.html">ΑΡΧΙΚΗ ΣΕΛΙΔΑ</a>
+          </div>
+
+          <div class="dropdown">
+            <a class="dropbtn" href="./webpages/foitites.html">ΦΟΙΤΗΤΕΣ</a>
+            <div class="dropdown-content">
+                <a href="./webpages/under-construction.html">Δήλωση Συγγραμμάτων</a>
+                <a href="./webpages/under-construction.html">Ανταλλαγή Συγγραμμάτων</a>
+                <a href="./webpages/under-construction.html">Διάθεση Σημειώσεων</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a class="dropbtn" href="./webpages/ekdotes.html">ΕΚΔΟΤΕΣ</a>
+            <div class="dropdown-content">
+              <a href="./webpages/under-construction.html">Λίστα Συγγραμμάτων</a>
+              <a href="./webpages/under-construction.html">Σύστημα Πληρωμών</a>
+              <a href="./webpages/under-construction.html">Διανομή με Courier</a>
+              <a href="./webpages/under-construction.html">Παραγγελίες Βιβλιοθηκών</a>
+              <a href="./webpages/under-construction.html">Παραγγελίες Σημείων Διανομής</a>
+              <a href="./webpages/under-construction.html">Οδηγίες</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <a class="dropbtn" href="./webpages/under-construction.html">ΓΡΑΜΜΑΤΕΙΕΣ</a>
+          </div>
+
+          <div class="dropdown">
+            <a class="dropbtn" href="./webpages/under-construction.html">ΒΙΒΛΙΟΘΗΚΕΣ</a>
+          </div>
+
+          <div class="dropdown">
+            <a class="dropbtn" href="./webpages/under-construction.html">ΣΗΜΕΙΑ ΔΙΑΝΟΜΗΣ</a>
+          </div>
+
+          <div class="dropdown">
+            <a class="dropbtn" href="./webpages/under-construction.html">ΕΥΔΟΞΟΣ</a>
+          </div>
+
+        </div>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<div class="main-body">
+  <div id="centerPanel">
+    <div class="title"><span>Αρχική Σελίδα</span></div>
+        <div class="line">
+                          </div>
+                          <div id="middleCenter">
+                              <div style="display: block" class="contents">
+
+      <div class="Content" id="contentDetailsObjectItem">
+  	<div class="content-body">
+  		<p><strong>ΗΛΕΚΤΡΟΝΙΚΗ ΥΠΗΡΕΣΙΑ ΟΛΟΚΛΗΡΩΜΕΝΗΣ ΔΙΑΧΕΙΡΙΣΗΣ ΣΥΓΓΡΑΜΜΑΤΩΝ</strong></p>
+  <p>Πρόκειται για μία πρωτοποριακή υπηρεσία για την άμεση και ολοκληρωμένη παροχή των Συγγραμμάτων των προπτυχιακών φοιτητών των Πανεπιστημίων, των Τεχνολογικών Εκπαιδευτικών Ιδρυμάτων (Τ.Ε.Ι.) και των Ανώτατων Εκκλησιαστικών Ακαδημιών (Α.Ε.Α.) της επικράτειας καθώς και του Ελληνικού Ανοιχτού Πανεπιστημίου (Ε.Α.Π.).</p>
+  <p>Το έργο εκτελείται για πρώτη φορά το ακαδημαϊκό έτος 2010-11 για όλους τους προπτυχιακούς φοιτητές όλων των Πανεπιστημίων/ΤΕΙ της χώρας. Από το ακαδημαϊκό έτος 2016-2017, στη διανομή των ακαδημαϊκών συγγραμμάτων συμμετέχουν και τα προπτυχιακά τμήματα του Ελληνικού Ανοικτού Πανεπιστημίου.</p>
+  <div>Η διαδικασία είναι πλήρως αυτοματοποιημένη και προσφέρει:</div>
+  <p>(α) Πλήρη ενημέρωση στους φοιτητές για τα παρεχόμενα Συγγράμματα σε κάθε μάθημα<br>(β) Δυνατότητα άμεσης παραλαβής των Συγγραμμάτων και<br>(γ) Αποτελεσματικούς μηχανισμούς για την ταχεία αποζημίωση των Εκδοτών και για την αποτροπή της καταχρηστικής εκμετάλλευσης των δημόσιων πόρων</p>
+  <p><br><strong>Περιγραφή φάσεων/διαδικασιών</strong></p>
+  <p>1. Κάθε Εκδότης περνάει αρχικά μία διαδικασία πιστοποίησης προκειμένου να αποκτήσει πρόσβαση στο σύστημα. Έπειτα &nbsp;εντός του προβλεπόμενου χρονικού διαστήματος που ορίζεται από το Υπουργείο Παιδείας, μπορεί να προβαίνει στην καταχώριση και τη διαρκή ενημέρωση των στοιχείων των Συγγραμμάτων του στην Κεντρική Βάση Δεδομένων (ΚΒΔ).<br>2. Οι διδάσκοντες των Τμημάτων έχουν πρόσβαση στην Κεντρική Βάση των Συγγραμμάτων και μπορούν να επιλέξουν ποια Συγγράμματα θα προτείνουν για το μάθημά τους ή τις θεματικές ενότητες.<br>3. Τα Συγγράμματα/Σειρές Συγγραμμάτων (για τους φοιτητές του Ε.Α.Π.) που εγκρίνονται από τα αρμόδια ακαδημαϊκά όργανα, καταχωρίζονται από τη Γραμματεία του κάθε Τμήματος στην ΚΒΔ, σε αντιστοιχία με τα μαθήματα/θεματικές ενότητες του Προγράμματος Σπουδών.<br>4.&nbsp; Ο φοιτητής εισέρχεται σε μία κεντρική ιστοσελίδα του Κεντρικού Πληροφοριακού Συστήματος (ΚΠΣ) από όπου γίνεται η πιστοποίησή του (μέσω Shibboleth). Εκεί ενημερώνεται για τα εγκεκριμένα Συγγράμματα/Σειρές Συγγραμμάτων των μαθήματων/θεματικών ενοτήτων του Τμήματός του και επιλέγει τα Συγγράμματα/Σειρές συγγραμμάτων που δικαιούται.<br>5. Ο φοιτητής λαμβάνει άμεσα από το ΚΠΣ ένα e-mail με τον κωδικό ΡΙΝ, με τον οποίο και παραλαμβάνει τα Συγγράμματα που επέλεξε.<br>6. Το Υπουργείο Παιδείας ενημερώνεται σε πραγματικό χρόνο για την πορεία του έργου και μεριμνά για την ταχεία αποζημίωση των εκδοτών.</p>
+  <p><strong>Αναμενόμενα Πλεονεκτήματα</strong></p>
+  <p>Α. Επιταχύνεται η διαδικασία παραλαβής Συγγραμμάτων από τους φοιτητές.<br>Β. Ελαχιστοποιείται ο διαχειριστικός φόρτος στις Γραμματείες των Τμημάτων.<br>Γ. Απλοποιείται η σχέση του Υπουργείου Παιδείας με τους Εκδότες, ελαχιστοποιώντας την ανάγκη ανταλλαγής εγγράφων - λιστών.<br>Δ. Ο χρόνος που μεσολαβεί από την εγγραφή του φοιτητή μέχρι την παραλαβή του Συγγράμματος, μπορεί να περιοριστεί σε ελάχιστες εργάσιμες ημέρες από περισσότερους από δύο μήνες σήμερα.<br>Ε. Η αποζημίωση των Εκδοτών μπορεί να γίνει αμέσως μετά την ολοκλήρωση της παράδοσης των Συγγραμμάτων, ενώ σήμερα πραγματοποιείται τουλάχιστον 12 μήνες μετά τη διανομή.<br>ΣΤ. Ελαχιστοποιούνται τα περιθώρια για καταχρηστική εκμετάλλευση δημόσιων πόρων.<br>Ζ. Εξοικονομούνται σημαντικοί ανθρώπινοι πόροι στις υπηρεσίες των Πανεπιστημίων/ΤΕΙ και του Υπουργείου Παιδείας.<br>Η. Δημιουργούνται οι προϋποθέσεις για την ασφαλή και σταδιακή μετάβαση στην εποχή του ηλεκτρονικού Συγγράμματος</p>
+  	</div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<footer>
+  <div class="container">
+    <p class="finish">Copyright © Ταβουλάρης International</p>
+  </div>
+</footer>
+
+</body>
+</html>

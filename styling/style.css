@@ -17,6 +17,22 @@ nav {
   display: block;
 }
 
+
+
+
+.top-bar-separator {
+  color: #EA5A00;
+}
+
+.m-0 {
+  margin: 0px;
+}
+
+.no-border{
+  border: none;
+}
+
+
 .down-header {
 	border-bottom: 6pt solid #EA5A00;
 }
@@ -247,7 +263,7 @@ a {
 
 
 /*contact bar*/
-.contact-section row {
+.contact-section row2 {
     display: inline;
 }
 .contact-section {

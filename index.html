@@ -5,72 +5,17 @@
   <meta name="viewport" content="width=device-width">
   <title>Εύδοξος – Ηλεκτρονική Υπηρεσία Ολοκληρωμένης Διαχείρισης Συγγραμμάτων</title>
   <link rel="stylesheet" href="./styling/style.css"/>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
 
 <body>
-<!--comment
-  <header id="header" class="header ng-scope">
-      <div class="header-top bg-deep sm-text-center">
-          <div class="container">
-              <div class="row">
-                  <div class="col-md-6">
-                      <div class="widget no-border m-0">
-                          <ul class="list-inline pull-left flip sm-pull-none sm-text-center mt-5 ulTop">
-                              <li><a href="./student_login/login.php">Σύνδεση</a></li>
-                              <li class=""><span class="top-bar-seperator">|</span></li>
-                              <li><a href="/student_login/register.php">Εγγραφή</a></li>
-                          </ul>
-                      </div>
-                  </div>
-                  <div class="col-md-6">
-                      <div class="widget no-border m-0">
-                          <div class="search-form-wrapper">
-                              <form id="searchform" name="searchform" method="get" class="m-0 ng-pristine ng-invalid ng-invalid-required ng-valid-minlength" ng-submit="vm.search(searchform)" novalidate="">
-                                  <input type="text" name="searchTerm" id="searchInput" class="search-input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength" style="height: 38px;" placeholder="Αναζήτηση" ng-model="vm.searchTerm" minlength="3" required="">
 
-                                  <label title="Υποχρεωτικό πεδίο (Ελάχιστο μήκος 3 χαρακτήρες)">
-                                      <input type="submit" name="submit" style="height: 34px;">
-                                  </label>
-                                  <span ng-show="(searchform.$dirty || searchform.$submitted) &amp;&amp; searchform.searchTerm.$error.minlength" class="error ng-hide">Ελάχιστο μήκος 3 χαρακτήρες</span>
-                              </form>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
---->
 
 <header>
   <!--logo-------->
   <div class="upper-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="widget no-border m-0">
-            <ul class="list-inline pull-left flip sm-pull-none sm-text-center mt-5 ulTop">
-              <li><a href="./student_login/login.php">Σύνδεση</a></li>
-              <li class=""><span class="top-bar-seperator">|</span></li>
-              <li><a href="/student_login/register.php">Εγγραφή</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="widget no-border m-0">
-            <div class="search-form-wrapper">
-              <form id="searchform" name="searchform" method="get" class="m-0 ng-pristine ng-invalid ng-invalid-required ng-valid-minlength" ng-submit="vm.search(searchform)" novalidate="">
-                <input type="text" name="searchTerm" id="searchInput" class="search-input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength" style="height: 38px;" placeholder="Αναζήτηση" ng-model="vm.searchTerm" minlength="3" required="">
-                <label title="Υποχρεωτικό πεδίο (Ελάχιστο μήκος 3 χαρακτήρες)">
-                  <input type="submit" name="submit" style="height: 34px;">
-                </label>
-                <span ng-show="(searchform.$dirty || searchform.$submitted) &amp;&amp; searchform.searchTerm.$error.minlength" class="error ng-hide">Ελάχιστο μήκος 3 χαρακτήρες</span>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
+
 
   <div class="down-header">
     <div class="container">
@@ -178,7 +123,7 @@
 
 
   <section class="container contact-section">
-    <div class="row">
+    <div class="row2">
       <div class="col-sm-6 col-lg-4 ui-sortable">
         <a class="btn btn-default btn-outline big-size" href="./webpages/under-construction.html">
           <i class="fas fa-comments"></i>
@@ -200,63 +145,6 @@
     </div>
   </section>
 </div>
-
-
-
-<!--lala
- <button id="LoginBtn" class="login-btn">Σύνδεση</button>
-
- <div id="myLoginPage" class="login-page">
-
-   <div class="login-content">
-     <span class="close">&times;</span>
-
-     <div class="log">
-       <img src="./images/logo.png" alt="Eudoxus logo" class="logo">
-       <form>
-         Όνομα Χρήστη:<br>
-         <input type="text" name="email" style="height: 38px;" placeholder="E-mail" minlength="3" required=""><br>
-         Κωδικός:<br>
-         <input type="password" name="password" style="height: 38px;" placeholder="Κωδικός" minlength="3" required=""><br>
-         <div class="signin">
-           <input type="submit"  value="Είσοδος">
-         </div>
-         <div class="cancel">
-           <button type="button" href="./index.html">Άκυρο</button>
-         </div>
-       </form>
-     </div>
-
-
-   </div>
-
- </div>
-
-  <section class="container contact-section">
-      <div class="row">
-          <div class="col-sm-6 col-md-4 col-lg-4 ui-sortable">
-              <a class="btn btn-default btn-outline big-size" href="./webpages/under-construction.html">
-                  <i class="fas fa-comments"></i>
-                  <span>Συχνές Ερωτήσεις</span>
-              </a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-4 ui-sortable">
-              <a class="btn btn-default btn-outline big-size" href="./webpages/under-construction.html">
-                  <i class="far fa-envelope"></i>
-                  <span>Ηλ. Φόρμα Επικοινωνίας</span>
-              </a>
-          </div>
-          <div class="col-sm-6 col-md-4 col-lg-4">
-              <a class="btn btn-default btn-outline big-size" href="./webpages/under-construction.html">
-                  <i class="fas fa-phone"></i>
-                  <span>Χρήσιμα Τηλέφωνα</span>
-              </a>
-          </div>
-      </div>
-  </section>
--->
-
-
 
 
 <footer>
