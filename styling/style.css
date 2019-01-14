@@ -17,6 +17,10 @@ nav {
   display: block;
 }
 
+.down-header {
+	border-bottom: 6pt solid #EA5A00;
+}
+
 .pull-left {
   z-index: 99;
   float: left;
@@ -65,11 +69,13 @@ ul {
 
 /* Navbar container */
 .navbar {
-  overflow: auto;
   background-color: #333;
   max-height: 400px;
-  margin: 0;
+  margin: 10px 5px;
   padding: 0;
+  position: absolute;
+  bottom: 27px;
+  right: 50px;
 }
 
 /* The dropdown container */
@@ -132,6 +138,9 @@ ul {
   color: white;
 }
 
+.main-content {
+  margin-top: 25px;
+}
 
 
 .seira {
@@ -146,8 +155,8 @@ ul {
 }
 
 .col-md-4 {
-  flex: 0 0 30%;
-  max-width: 30%;
+  flex: 0 0 33.333%;
+  max-width: 31%;
   position: relative;
   width: 100%;
   min-height: 1px;
@@ -173,11 +182,11 @@ ul {
 
 .card-body {
   flex: 1 1 auto;
-  padding: 1.25rem;
 }
 
 .card-title {
   margin-bottom: .75rem;
+  margin-top: .75rem;
 }
 
 h2 {
