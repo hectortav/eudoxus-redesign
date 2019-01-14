@@ -4,83 +4,136 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Εύδοξος – Ηλεκτρονική Υπηρεσία Ολοκληρωμένης Διαχείρισης Συγγραμμάτων</title>
-  <link rel="stylesheet" href="./styling/styles.css"/>
+  <link rel="stylesheet" href="./styling/style.css"/>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous"></head>
 
 <body>
 
-<!--------logo-------->
-  <a href="./index.html">
-    <img src="./images/logo.png" alt="Eudoxus logo">
-  </a>
-
+<!--comment
   <header id="header" class="header ng-scope">
       <div class="header-top bg-deep sm-text-center">
           <div class="container">
               <div class="row">
                   <div class="col-md-6">
                       <div class="widget no-border m-0">
+                          <ul class="list-inline pull-left flip sm-pull-none sm-text-center mt-5 ulTop">
+                              <li><a href="./student_login/login.php">Σύνδεση</a></li>
+                              <li class=""><span class="top-bar-seperator">|</span></li>
+                              <li><a href="/student_login/register.php">Εγγραφή</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div class="col-md-6">
+                      <div class="widget no-border m-0">
                           <div class="search-form-wrapper">
                               <form id="searchform" name="searchform" method="get" class="m-0 ng-pristine ng-invalid ng-invalid-required ng-valid-minlength" ng-submit="vm.search(searchform)" novalidate="">
-                                  <input type="text" name="searchTerm" id="searchInput" class="search-input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength" style="height: 38px;" placeholder="Αναζήτηση" minlength="3" required="">
+                                  <input type="text" name="searchTerm" id="searchInput" class="search-input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength" style="height: 38px;" placeholder="Αναζήτηση" ng-model="vm.searchTerm" minlength="3" required="">
 
                                   <label title="Υποχρεωτικό πεδίο (Ελάχιστο μήκος 3 χαρακτήρες)">
                                       <input type="submit" name="submit" style="height: 34px;">
                                   </label>
-                                  <!--<span ng-show="(searchform.$dirty || searchform.$submitted) &amp;&amp; searchform.searchTerm.$error.minlength" class="error ng-hide">Ελάχιστο μήκος 3 χαρακτήρες</span>-->
+                                  <span ng-show="(searchform.$dirty || searchform.$submitted) &amp;&amp; searchform.searchTerm.$error.minlength" class="error ng-hide">Ελάχιστο μήκος 3 χαρακτήρες</span>
                               </form>
-
                           </div>
                       </div>
                   </div>
               </div>
           </div>
       </div>
-  </header>
+--->
 
-
-<!------navigation bar----->
-
-  <div class="navbar">
-
-    <a class="active" href="./index.html">ΑΡΧΙΚΗ ΣΕΛΙΔΑ</a>
-
-    <div class="dropdown">
-      <button class="dropbtn" href="./webpages/foitites.html">ΦΟΙΤΗΤΕΣ</button>
-      <div class="dropdown-content">
-        <a href="./webpages/under-construction.html">Δήλωση Συγγραμμάτων</a>
-        <a href="./webpages/under-construction.html">Ανταλλαγή Συγγραμμάτων</a>
-        <a href="./webpages/under-construction.html">Διάθεση Σημειώσεων</a>
+<header>
+  <!--logo-------->
+    <div class="upper-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="widget no-border m-0">
+              <ul class="list-inline pull-left flip sm-pull-none sm-text-center mt-5 ulTop">
+                <li><a href="./student_login/login.php">Σύνδεση</a></li>
+                <li class=""><span class="top-bar-seperator">|</span></li>
+                <li><a href="/student_login/register.php">Εγγραφή</a></li>
+              </ul>
+            </div>
+          </div>
+        <div class="col-md-6">
+        <div class="widget no-border m-0">
+          <div class="search-form-wrapper">
+            <form id="searchform" name="searchform" method="get" class="m-0 ng-pristine ng-invalid ng-invalid-required ng-valid-minlength" ng-submit="vm.search(searchform)" novalidate="">
+              <input type="text" name="searchTerm" id="searchInput" class="search-input ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-minlength" style="height: 38px;" placeholder="Αναζήτηση" ng-model="vm.searchTerm" minlength="3" required="">
+                <label title="Υποχρεωτικό πεδίο (Ελάχιστο μήκος 3 χαρακτήρες)">
+                  <input type="submit" name="submit" style="height: 34px;">
+                </label>
+                <span ng-show="(searchform.$dirty || searchform.$submitted) &amp;&amp; searchform.searchTerm.$error.minlength" class="error ng-hide">Ελάχιστο μήκος 3 χαρακτήρες</span>
+              </form>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
-    <div class="dropdown">
-      <button class="dropbtn" href="./webpages/ekdotes.html">ΕΚΔΟΤΕΣ</button>
-      <div class="dropdown-content">
-        <a href="./webpages/under-construction.html">Λίστα Συγγραμμάτων</a>
-        <a href="./webpages/under-construction.html">Σύστημα Πληρωμών</a>
-        <a href="./webpages/under-construction.html">Διανομή με Courier</a>
-        <a href="./webpages/under-construction.html">Παραγγελίες Βιβλιοθηκών</a>
-        <a href="./webpages/under-construction.html">Παραγγελίες Σημείων Διανομής</a>
-        <a href="./webpages/under-construction.html">Οδηγίες</a>
-      </div>
-    </div>
-
-    <a href="./webpages/under-construction.html">ΓΡΑΜΜΑΤΕΙΕΣ</a>
-    <a href="./webpages/under-construction.html">ΒΙΒΛΙΟΘΗΚΕΣ</a>
-    <a href="./webpages/under-construction.html">ΣΗΜΕΙΑ ΔΙΑΝΟΜΗΣ</a>
-    <a href="./webpages/under-construction.html">ΕΥΔΟΞΟΣ</a>
   </div>
 
+  <div class="down-header">
+    <div class="container">
+      <nav class="menu">
+        <div class="index-logo pull-left">
+          <a href="./index.html"><img src="./images/logo.png" alt="Eudoxus logo"></a>
+        </div>
+
+        <div class="navbar">
+          <div class="dropdown">
+            <button class="active dropbtn" href="./index.html">ΑΡΧΙΚΗ ΣΕΛΙΔΑ</button>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn" href="./webpages/foitites.html">ΦΟΙΤΗΤΕΣ</button>
+            <div class="dropdown-content">
+                <a href="./webpages/under-construction.html">Δήλωση Συγγραμμάτων</a>
+                <a href="./webpages/under-construction.html">Ανταλλαγή Συγγραμμάτων</a>
+                <a href="./webpages/under-construction.html">Διάθεση Σημειώσεων</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn" href="./webpages/ekdotes.html">ΕΚΔΟΤΕΣ</button>
+            <div class="dropdown-content">
+              <a href="./webpages/under-construction.html">Λίστα Συγγραμμάτων</a>
+              <a href="./webpages/under-construction.html">Σύστημα Πληρωμών</a>
+              <a href="./webpages/under-construction.html">Διανομή με Courier</a>
+              <a href="./webpages/under-construction.html">Παραγγελίες Βιβλιοθηκών</a>
+              <a href="./webpages/under-construction.html">Παραγγελίες Σημείων Διανομής</a>
+              <a href="./webpages/under-construction.html">Οδηγίες</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn" href="./webpages/under-construction.html">ΓΡΑΜΜΑΤΕΙΕΣ</button>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn" href="./webpages/under-construction.html">ΒΙΒΛΙΟΘΗΚΕΣ</button>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn" href="./webpages/under-construction.html">ΣΗΜΕΙΑ ΔΙΑΝΟΜΗΣ</button>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropbtn" href="./webpages/under-construction.html">ΕΥΔΟΞΟΣ</button>
+          </div>
+
+        </div><br class="clear"/>
+      </nav>
+    </div>
+  </div>
+</header>
 
 
-  <!-- Trigger/Open The Modal -->
+<!--lala
  <button id="LoginBtn" class="login-btn">Σύνδεση</button>
 
- <!-- The Modal -->
  <div id="myLoginPage" class="login-page">
 
-   <!-- Modal content -->
    <div class="login-content">
      <span class="close">&times;</span>
 
@@ -127,8 +180,7 @@
           </div>
       </div>
   </section>
-
-
+-->
 <script>
  // Get the modal
 var modal = document.getElementById('myLoginPage');
@@ -156,11 +208,6 @@ window.onclick = function(event) {
   }
 }
 </script>
-
-<!--footer------------->
-    <footer>
-      <p>Αυτή η σελίδα υλοποιήθηκε από τον Έκτορα Ταβουλάρη και τον Θοδωρή Μέλλιο</p>
-    </footer>
 
 
 </body>
