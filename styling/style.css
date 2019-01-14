@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    color: #777777;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    background-color: #fff;
+    background-attachment: fixed;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+nav {
+  display: block;
+}
+
+.pull-left {
+  z-index: 99;
+  float: left;
+}
+
+.clear {
+    clear:both;
+    line-height:0;
+}
+
+.container {
+  width: 1370px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.menu {
+  padding: 0;
+  width: 100%;
+  position: relative;
+  background: #fff;
+}
+
+.index-logo {
+  margin: 10px 5px;
+}
+
+.index-logo img {
+  max-height: 320px;
+}
+
+a img {
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar container */
+.navbar {
+  overflow: auto;
+  background-color: #333;
+  max-height: 400px;
+  margin: 0;
+  padding: 0;
+}
+
+/* The dropdown container */
+.dropdown {
+ float: left;
+ overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+  display: inline-block;
+}
+
+/* Add an orange background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+ background-color: #EA5A00;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+ display: none;
+ position: absolute;
+ background-color: #f9f9f9;
+ min-width: 160px;
+ box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+ float: none;
+ color: black;
+ padding: 12px 16px;
+ text-decoration: none;
+ display: block;
+ text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+ background-color: #EA5A00;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+ display: block;
+}
+
+
+.navbar button.active {
+  background-color: #EA5A00;
+  color: white;
+}
